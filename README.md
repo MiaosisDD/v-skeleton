@@ -1,5 +1,7 @@
 # v-skeleton
-一个简易的骨架屏 基于element-ui的栅格布局(后面就不用啦！
+一个简易的骨架屏 基于element-ui的栅格布局 (后面就不用啦！
+
+![skeleton](https://i.loli.net/2019/06/24/5d106994017b260227.gif)
 
 # 安装
 ```javascript
@@ -33,4 +35,4 @@ Vue.use(Skeleton)
 ```
 
 
-(在nuxt中挣扎了半天 最后写了这个临时使用
+> 在nuxt中挣扎了半天 最后写了这个临时使用
