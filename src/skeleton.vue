@@ -1,18 +1,17 @@
 <template>
   <div v-show="visible" class="skeleton-box">
-    <el-row :gutter="10" v-for="(row, rindex) in COLUMNS" :key="rindex">
-      <el-col v-for="(col, cindex) in row" :key="cindex" :span="col">
-        <div class="skeleton-item"></div>
-      </el-col>
-    </el-row>
+    <div class='__row' v-for="(row, rindex) in COLUMNS" :key="rindex">
+      <div class='__col' v-for="(col, cindex) in row" :key="cindex" :style='{width: col + "%"}'>
+        <div class="__item"></div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-const COLUMNS = [[20], [8, 15], [6, 18], [13, 9], [4, 3, 16]]
+const COLUMNS = [[83], [33, 62.5], [25, 75], [54, 37.5], [16.6, 12.5, 66.6]]
 
 export default {
-  name: "Skeleton",
   data() {
     return {
       visible: false,
@@ -22,7 +21,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @keyframes card-loading {
   0%,
   to {
@@ -46,7 +45,7 @@ export default {
   overflow: hidden;
 }
 
-.skeleton-item {
+.__item {
   height: 16px;
   background:
     linear-gradient(
@@ -58,6 +57,12 @@ export default {
   background-size: 600% 600%;
   border-radius: 2px;
   animation: card-loading 1.4s ease infinite;
-  margin: 6px 0;
+  margin: 3px 0;
+}
+
+.__col {
+  display: inline-block;
+  padding: 0 5px;
+  box-sizing: border-box;
 }
 </style>
