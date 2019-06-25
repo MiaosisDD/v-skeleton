@@ -1,5 +1,5 @@
 # v-skeleton
-一个简易的骨架屏 基于element-ui的栅格布局 (后面就不用啦！
+一个简易的骨架屏
 
 ![skeleton](https://i.loli.net/2019/06/24/5d106994017b260227.gif)
 

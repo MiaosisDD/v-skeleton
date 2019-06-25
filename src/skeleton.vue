@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='less'>
 @keyframes card-loading {
   0%,
   to {
@@ -43,26 +43,30 @@ export default {
   height: 140px;
   background: #fff;
   overflow: hidden;
+
+  .__col {
+    display: inline-block;
+    padding: 0 5px;
+    box-sizing: border-box;
+
+    .__item {
+      height: 16px;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(207, 216, 220, 0.2),
+          rgba(207, 216, 220, 0.4),
+          rgba(207, 216, 220, 0.2)
+        );
+      background-size: 600% 600%;
+      border-radius: 2px;
+      animation: card-loading 1.4s ease infinite;
+      margin: 3px 0;
+    }
+  }
 }
 
-.__item {
-  height: 16px;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(207, 216, 220, 0.2),
-      rgba(207, 216, 220, 0.4),
-      rgba(207, 216, 220, 0.2)
-    );
-  background-size: 600% 600%;
-  border-radius: 2px;
-  animation: card-loading 1.4s ease infinite;
-  margin: 3px 0;
-}
 
-.__col {
-  display: inline-block;
-  padding: 0 5px;
-  box-sizing: border-box;
-}
+
+
 </style>
